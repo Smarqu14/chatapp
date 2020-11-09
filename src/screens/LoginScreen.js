@@ -1,10 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Title} from 'react-native-paper';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
+import {AuthContext} from '../navigations/AuthProvider';
+
+// rest of the import statements remain same
 
 export default function LoginScreen({navigation}) {
+  const {login} = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -27,6 +31,7 @@ export default function LoginScreen({navigation}) {
         title="Login"
         modeValue="contained"
         labelStyle={styles.loginButtonLabel}
+        onPress={() => login(email, password)}
       />
       <FormButton
         title="New user? Join here"
