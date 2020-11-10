@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   loginButtonLabel: {
-    fontSize: 22,
+    fontSize: 18,
   },
   navButtonText: {
     fontSize: 16,
