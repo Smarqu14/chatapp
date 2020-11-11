@@ -6,7 +6,6 @@ import FormButton from '../components/FormButton';
 import {AuthContext} from '../navigations/AuthProvider';
 
 // rest of the import statements remain same
-
 export default function LoginScreen({navigation}) {
   const {login} = useContext(AuthContext);
   const [email, setEmail] = useState('');
